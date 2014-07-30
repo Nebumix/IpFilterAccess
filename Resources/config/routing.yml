@@ -1,7 +1,3 @@
-acme_ip_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: AcmeIpBundle:Default:index }
-
 acme_ip_list:
     path:     /ip/list
     defaults: { _controller: AcmeIpBundle:Default:list }
