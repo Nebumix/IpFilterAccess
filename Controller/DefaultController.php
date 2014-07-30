@@ -37,11 +37,11 @@ class DefaultController extends Controller
 
 	        $em = $this->getDoctrine()->getManager();
 
-			$em->persist($ip);	
-		    $em->flush();	    
+		$em->persist($ip);	
+		$em->flush();	    
 
-			return $this->redirect($this->generateUrl('acme_ip_list'));
-		}
+		return $this->redirect($this->generateUrl('acme_ip_list'));
+	    }
 
         return $this->render('AcmeIpBundle:Default:ipList.html.twig', array(
         	'form' => $form->createView(), 'ips' => $ips
