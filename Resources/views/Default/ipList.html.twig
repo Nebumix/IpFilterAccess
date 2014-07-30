@@ -1,0 +1,10 @@
+<br>
+{{ form(form) }}
+<br><hr><br>
+<ul>
+{% for ip in ips %}
+
+	<li>{{ ip.ip }} {{ ip.description }}</li>
+
+{% endfor %}
+</ul>
