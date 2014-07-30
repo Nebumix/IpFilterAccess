@@ -62,11 +62,8 @@ class ClientIpVoter implements VoterInterface
     {
         $request = $this->container->get('request');
         if ($this->supportsAttribute($attributes) && !in_array($request->getClientIp(), $this->blacklistedIp)) {
-            echo "AAAAA";
             return VoterInterface::ACCESS_DENIED;
         }
-
-        
 
         return VoterInterface::ACCESS_ABSTAIN;
     }
