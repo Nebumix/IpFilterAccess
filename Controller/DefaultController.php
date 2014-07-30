@@ -18,9 +18,9 @@ class DefaultController extends Controller
     public function listAction(Request $request)
     {
 
-	    $em = $this->getDoctrine()->getManager();
+	$em = $this->getDoctrine()->getManager();
 
-		$ips = $em->getRepository('AcmeIpBundle:IpAddresses')->findAll();
+	$ips = $em->getRepository('AcmeIpBundle:IpAddresses')->findAll();
 
 
         $ip = new ipAddresses();
